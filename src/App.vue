@@ -17,7 +17,11 @@
     <!-- <AbstrancFactory /> -->
     <!-- <AbstractFacvtory2 /> -->
     <!-- <Duck /> -->
-    <Decorator1 />
+    <!-- <Decorator1 /> -->
+    <!-- <Decorator2 /> -->
+    <!-- <Adapter1 /> -->
+    <!-- <Adapter2 /> -->
+    <Command />
 </template>
 
 <script setup lang="ts">
@@ -39,6 +43,10 @@ import AbstractFacvtory2 from './components/factory/abstractFactory/abstractFacv
 import Duck from './components/storategy/storategy1/Duck.vue';
 import ObservePractice3 from './components/observe/ObservePractice3.vue';
 import Decorator1 from './components/decorator/decorator1.vue';
+import Decorator2 from './components/decorator/decorator2.vue';
+import Adapter1 from './components/adapter/Adapter1.vue';
+import Adapter2 from './components/adapter/Adapter2.vue';
+import Command from './components/command/Command.vue';
 </script>
 
 

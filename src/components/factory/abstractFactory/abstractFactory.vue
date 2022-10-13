@@ -31,13 +31,6 @@ type AmountTypeList = keyof AmountType;
 type SchoolType = { [schoolName: string]: AmountType };
 type CountryType = { [country: string]: SchoolType };
 
-
-interface School {
-    studensAmount(): number;
-    teacherAmount(): number;
-    studentsAmountPerOneTeacher(): number;
-}
-
 const amount: CountryType = {
     japan: {
         aichikenHeisyu: {
@@ -67,6 +60,11 @@ const amount: CountryType = {
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 
+interface School {
+    studensAmount(): number;
+    teacherAmount(): number;
+    studentsAmountPerOneTeacher(): number;
+}
 
 // Factory
 abstract class SchoolFactory {
