@@ -22,7 +22,8 @@
     <!-- <Adapter1 /> -->
     <!-- <Adapter2 /> -->
     <!-- <Command /> -->
-    <Game />
+    <!-- <Game /> -->
+    <Proxy1 />
 </template>
 
 <script setup lang="ts">
@@ -49,6 +50,7 @@ import Adapter1 from './components/adapter/Adapter1.vue';
 import Adapter2 from './components/adapter/Adapter2.vue';
 import Command from './components/command/Command.vue';
 import Game from './components/command/Game.vue';
+import Proxy1 from './components/proxy/proxy1.vue';
 </script>
 
 
