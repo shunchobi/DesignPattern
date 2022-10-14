@@ -21,7 +21,8 @@
     <!-- <Decorator2 /> -->
     <!-- <Adapter1 /> -->
     <!-- <Adapter2 /> -->
-    <Command />
+    <!-- <Command /> -->
+    <Game />
 </template>
 
 <script setup lang="ts">
@@ -47,6 +48,7 @@ import Decorator2 from './components/decorator/decorator2.vue';
 import Adapter1 from './components/adapter/Adapter1.vue';
 import Adapter2 from './components/adapter/Adapter2.vue';
 import Command from './components/command/Command.vue';
+import Game from './components/command/Game.vue';
 </script>
 
 
