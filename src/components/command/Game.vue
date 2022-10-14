@@ -11,15 +11,29 @@ import {GameManager} from './GameManager'
 
 const statusData = useCommandData();
 
-console.log(statusData.getGameStatus)
-const game = new GameManager();
-game.success();
-
 watch(() => statusData.getGameStatus, () => {
     console.log(statusData.getGameStatus);
 })
 
-game.fail();
+
+class Game {
+    public gameClearHook: () => void;
+
+    public constructor() {
+        this.gameClearHook = () => { };
+    }
+
+    public trigger() {
+        this.gameClearHook();
+    }
+}
+
+const game = new Game();
+game.gameClearHook = () => {
+    console.log("hoge");
+}
+game.trigger();
+
 
 </script>
 
