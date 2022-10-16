@@ -6,7 +6,7 @@
     <!-- <Saiki /> -->
     <!-- <ObserverPractice2 /> -->
     <!-- <ObservePractice3 /> -->
-    <!-- <TestCode /> -->
+    <TestCode />
     <!-- <Observer3 /> -->
     <!-- <ObserveOriginal /> -->
     <!-- <ExampleIterator /> -->
@@ -25,7 +25,7 @@
     <!-- <Game /> -->
     <!-- <Proxy1 /> -->
     <!-- <Proxy2 /> -->
-    <Bridge1 />
+    <!-- <Bridge1 /> -->
 </template>
 
 <script setup lang="ts">
