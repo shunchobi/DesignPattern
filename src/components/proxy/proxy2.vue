@@ -50,7 +50,7 @@ class UserData implements DatabaseReource {
 }
 
 const usersData = new UserData();
-const shun = usersData.getUserInfoIDis(0);
+const shun = usersData.getUserInfoIDis(1);
 
 console.log(shun);
 

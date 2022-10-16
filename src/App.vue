@@ -24,7 +24,8 @@
     <!-- <Command /> -->
     <!-- <Game /> -->
     <!-- <Proxy1 /> -->
-    <Proxy2 />
+    <!-- <Proxy2 /> -->
+    <Bridge1 />
 </template>
 
 <script setup lang="ts">
@@ -53,6 +54,7 @@ import Command from './components/command/Command.vue';
 import Game from './components/command/Game.vue';
 import Proxy1 from './components/proxy/proxy1.vue';
 import Proxy2 from './components/proxy/proxy2.vue';
+import Bridge1 from './components/bridge/bridge1.vue';
 </script>
 
 
