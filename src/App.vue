@@ -6,7 +6,7 @@
     <!-- <Saiki /> -->
     <!-- <ObserverPractice2 /> -->
     <!-- <ObservePractice3 /> -->
-    <TestCode />
+    <!-- <TestCode /> -->
     <!-- <Observer3 /> -->
     <!-- <ObserveOriginal /> -->
     <!-- <ExampleIterator /> -->
@@ -26,6 +26,7 @@
     <!-- <Proxy1 /> -->
     <!-- <Proxy2 /> -->
     <!-- <Bridge1 /> -->
+    <Policy1 />
 </template>
 
 <script setup lang="ts">
@@ -55,6 +56,7 @@ import Game from './components/command/Game.vue';
 import Proxy1 from './components/proxy/proxy1.vue';
 import Proxy2 from './components/proxy/proxy2.vue';
 import Bridge1 from './components/bridge/bridge1.vue';
+import Policy1 from './components/policy/policy1.vue';
 </script>
 
 

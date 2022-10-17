@@ -5,62 +5,62 @@
 </template>
 
 <script setup lang="ts">
+import axios from 'axios'
 
-interface Answer {
-  readonly stageNum: number;
-  answerPazle(): string;
-  answerCode(): string;
+interface SendLogic {
+  send(data: any): string | Error;
 }
 
-class Stage1 implements Answer {
-  readonly stageNum: number = 1;
-  answerPazle(): string {
-    return 'loop up right loop';
-  }
-  answerCode(): string {
-    return '[ up right ]';
+class Axious implements SendLogic {
+  send(data: any): string | Error {
+    const config = {
+      method: 'post',
+      url: 'https://d4efhvv7a6.execute-api.ap-northeast-1.amazonaws.com/prod/post',
+      // headers: {
+      //   'Access-Control-Allow-Origin': '*',
+      //   "Content-type": "application/json",
+      // },
+      data: data
+    };
+
+    axios(config)
+      .then(function (response: any) {
+        return JSON.stringify(response.data);
+      })
+      .catch(function (error: Error) {
+        return error;
+      });
+
+    return new Error('fail post')
   }
 }
 
-class Stage2 implements Answer {
-  readonly stageNum: number = 2;
-  answerPazle(): string {
-    return 'loop up right right loop';
-  }
-  answerCode(): string {
-    return '[ up right right] x 3';
-  }
-}
-
-
-class Answers {
-  private answers: Answer[] = [];
+abstract class Post {
+  sendProcess: SendLogic;
   constructor() {
-    this.answers.push(
-      new Stage1(),
-      new Stage2(),
-    );
+    this.sendProcess = new Axious();
   }
+  abstract post(stageNum: number, mode: string, answer: string): string | Error;
+}
 
-  getAnswer(stageNum: number, mode: string): string | undefined{
-    if (mode === 'pazle') {
-      return this.findAnswer(stageNum)?.answerPazle();
-    }
-    if (mode === 'code') {
-      return this.findAnswer(stageNum)?.answerCode();
-    }
-    return undefined;
+class PostData extends Post {
+  constructor() {
+    super();
   }
-
-  private findAnswer(stageNum: number): Answer | undefined{
-    return this.answers.find(answer => answer.stageNum === stageNum);
+  post(stageNum: number, mode: string, answer: string): string | Error {
+    const stageLabel = mode === 'pazle' ? 'P' : 'C'
+    const stageNumLabel = ('000' + stageNum).slice(-3);
+    const data = {
+      stage_id: stageLabel + stageNumLabel, // P000
+      command: answer
+    }
+    return this.sendProcess.send(data);
   }
 }
 
+const postMG = new PostData();
+const result = postMG.post(3, 'code', 'right left up');
 
-const answers = new Answers();
-console.log(answers.getAnswer(1, 'code'));
-console.log(answers.getAnswer(4, 'code'));
 
 </script>
 
