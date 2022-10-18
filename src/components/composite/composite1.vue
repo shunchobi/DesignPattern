@@ -35,6 +35,9 @@ class Company implements Component {
     getName(): string{
         return this.name;
     }
+    // ここで自身が所有する部署の総売り上げと
+    // 所有する会社のgetSalesを呼んでその部署の総売り上げもよんでいる
+    // 再帰的に。
     getSales(): number{
         let allSales = 0;
         this.posts.forEach(post => {
@@ -52,6 +55,7 @@ class Post implements Component{
         this.name = name;
         this.sale = sale;
     }
+    // ここで実際の売り上げを返している
     getName(): string{
         return this.name;
     }
