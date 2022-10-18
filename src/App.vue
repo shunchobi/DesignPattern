@@ -26,7 +26,8 @@
     <!-- <Proxy1 /> -->
     <!-- <Proxy2 /> -->
     <!-- <Bridge1 /> -->
-    <Policy1 />
+    <!-- <Policy1 /> -->
+    <Composite1 />
 </template>
 
 <script setup lang="ts">
@@ -57,6 +58,7 @@ import Proxy1 from './components/proxy/proxy1.vue';
 import Proxy2 from './components/proxy/proxy2.vue';
 import Bridge1 from './components/bridge/bridge1.vue';
 import Policy1 from './components/policy/policy1.vue';
+import Composite1 from './components/composite/composite1.vue';
 </script>
 
 
