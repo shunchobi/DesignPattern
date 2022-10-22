@@ -29,7 +29,9 @@
     <!-- <Policy1 /> -->
     <!-- <Composite1 /> -->
     <!-- <Iterator3 /> -->
-    <state1 />
+    <!-- <state1 /> -->
+    <!-- <State2 /> -->
+    <Builder1 />
 </template>
 
 <script setup lang="ts">
@@ -63,6 +65,8 @@ import Policy1 from './components/policy/policy1.vue';
 import Composite1 from './components/composite/composite1.vue';
 import Iterator3 from './components/iterater/Iterator3.vue';
 import state1 from './components/state/state1.vue';
+import State2 from './components/state/state2.vue';
+import Builder1 from './components/builder/builder1/Builder1.vue';
 </script>
 
 
