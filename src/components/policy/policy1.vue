@@ -7,6 +7,9 @@
 <script setup lang="ts">
 import { createFunctionExpression, registerRuntimeHelpers } from '@vue/compiler-core';
 
+/**
+ * ネストした条件分岐をきれいに書けるデザパタ
+ */
 
 type Customor = {cost: number, offenMonth: number}
 const customor: Customor = {
@@ -14,6 +17,8 @@ const customor: Customor = {
     offenMonth: 11,
 }
 type CustomorRuleType = keyof typeof customor;
+
+
 
 interface ExellentCustomorRule {
     rule(customor: Customor): boolean;
@@ -23,6 +28,8 @@ interface CustomorRule {
     rules:  Map<CustomorRuleType, ExellentCustomorRule>;
     completeRule(customor: Customor): boolean;
 }
+
+
 
 class GoldCostRule implements ExellentCustomorRule {
     rule(customor: Customor): boolean {
